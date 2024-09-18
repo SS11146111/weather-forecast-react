@@ -1,10 +1,11 @@
 import './App.css';
-import { DisplayTV } from './components/DisplayTV';
+import WeatherReport from './components/WeatherReport';
+
 
 function App() {
   return (
     <div className="App">
-      <DisplayTV />
+    <WeatherReport/>
     </div>
   );
 }

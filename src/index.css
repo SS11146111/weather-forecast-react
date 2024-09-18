@@ -9,47 +9,19 @@
 }
 
 body{
-    background-color: darkgrey;
+    background-image: url("./images/intro.gif");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.c1,.c2{
+    margin: 10px;
 }
 .container{
-    position: absolute;
-    top: 10px
-}
-.tv{
-
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    
-}
-
-.intro{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    top: 56px;
-    left: 332px;
-    width: 880px;
-    height: 500px;
-}
-
-.reporter{
-
-    position: absolute;
-    z-index: 20;
-    top: 215px;
-    right: 20px;
-    width: 400px;
-    height: 500px;
-}
-
-.containerC{
-    display: flex;
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     background-color: black;
@@ -58,7 +30,7 @@ body{
 
 }
 
-.containerC button{
+.container button{
 
     background-color: rgb(23, 61, 175);
     color: white;
@@ -69,60 +41,27 @@ body{
     
 }
 
-.containerD{
+
+.tables, .tablesa{
     display: flex;
-    position: absolute;
-    bottom: 5px;
-    right: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 20px;
-    background-color: black;
-    border-radius: 10px;
-    border: 2px solid grey;
-    z-index: 30;
-}
-
-.containerD button{
-
-    background-color: rgb(23, 61, 175);
-    color: white;
-    border-radius: 5px;
-    margin: 1px;
-    padding: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
-}
-
-.details .tv{
-    display: block;
     width: 80%;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
+    background-color: darkgray;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+
 }
 
-.table1{
+.table1, .table2, .table3, .table1a, .table2a, .table3a{
   
-    position: absolute;
-    top: 150px;
-    left: 350px;
+    width: 25%;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
 
 }
 
-.table2{
-  
-    position: absolute;
-    top: 150px;
-    left: 600px;
-
-}
-
-.table3{
-  
-    position: absolute;
-    top: 150px;
-    left: 950px;
-
-}
 
 td, th{
     border: 1px solid black;
@@ -132,27 +71,100 @@ td, th{
     
 }
 
-.table1a{
-  
-    position: absolute;
-    top: 150px;
-    left: 350px;
+.condition{
+    display: block;
+    width: 60px;
+    margin-left: 50%;
+}
+@media only screen and (min-width: 862px) {
+    body{
+        background-image: url("./images/intro.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 }
 
-.table2a{
+@media only screen and (max-width: 862px) {
+
+    body{
+        background-image: url("./images/intro2.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+
+    .tables, .tablesa{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: darkgray;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    
+    }
+
+    .table1, .table2, .table3, .table1a, .table2a, .table3a{
   
-    position: absolute;
-    top: 150px;
-    left: 650px;
+        width: 70%;
+        margin: 50px auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    
+    }
+
+
 
 }
 
-.table3a{
+@media only screen and (max-width: 525px) {
+
+    body{
+        background-image: url("./images/intro2.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+
+    .tables, .tablesa{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: darkgray;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    
+    }
+
+    .table1, .table2, .table3, .table1a, .table2a, .table3a{
   
-    position: absolute;
-    top: 150px;
-    left: 940px;
+        width: 70%;
+        margin: 50px auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    
+    }
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px;
+        background-color: black;
+        border-radius: 10px;
+        border: 2px solid grey;
+    
+    }
+    
 
 }
 

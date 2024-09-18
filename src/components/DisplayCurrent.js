@@ -6,8 +6,7 @@ import r from "../images/reporter.png"
 export const DisplayCurrent = ({weather}) => {
   return (
         <div className='details'>
-          <img src={tv} alt="tv" className='tv'/>
-          <img src={r} alt="reporter" className='reporter'/>
+          <div className='tables'>
           <table className='table1'>
             <tbody>
             <tr>
@@ -35,6 +34,7 @@ export const DisplayCurrent = ({weather}) => {
               <td>{weather.current.wind_dir}</td>
             </tr>
             </tbody>
+            <img src={weather.current.condition.icon} alt="condition" className='condition'/>
           </table>
           <table className='table2'>
           <tbody>
@@ -63,6 +63,7 @@ export const DisplayCurrent = ({weather}) => {
               <td>{weather.current.air_quality.pm10}</td>
             </tr>
             </tbody>
+            <img src={weather.current.condition.icon} alt="condition" className='condition'/>
           </table>
           <table className='table3'>
             <tbody>
@@ -91,7 +92,9 @@ export const DisplayCurrent = ({weather}) => {
               <td>{weather.location.tz_id}</td>
             </tr>
             </tbody>
+            <img src={weather.current.condition.icon} alt="condition" className='condition'/>
           </table>
+          </div>
         </div>  
   )
 }

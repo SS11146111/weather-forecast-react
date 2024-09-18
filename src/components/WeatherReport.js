@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { DisplayCurrent } from './DisplayCurrent';
-import { DisplayTV } from './DisplayTV';
 import { DisplayForecast} from './DisplayForecast'
 
 
 
 const WeatherReport = () => {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState('Shillong');
   const [city2, setCity2] = useState('');
   const [days, setDays] = useState('');
   const [weather, setWeather] = useState(null);
@@ -62,10 +61,11 @@ const WeatherReport = () => {
       ) : (
        
         forecast !== null && weather === null ? (
-        <DisplayForecast forecast={forecast}/>):(<DisplayTV />)
+        <DisplayForecast forecast={forecast}/>):('')
       )}
 
-      <div className='containerC'>
+     <div className='container'>
+      <div className='c1'>
         <input
           type="text"
           value={city}
@@ -74,28 +74,28 @@ const WeatherReport = () => {
           style={{border: "1px solid grey", borderRadius:"5px", padding:"5px"}}
         />
         <button className="getToday" onClick={() => getCurrentWeatherReport(city)}>Get Current Report</button>
-      </div>
-
-      <div className='containerD'>
-        <input
-          type="text"
-          value={city2}
-          onChange={(e) => setCity2(e.target.value)}
-          placeholder="Enter city name"
-          style={{border: "1px solid grey", borderRadius:"5px", padding:"5px"}}
-        />
-        <input
-          type="number"
-          value={days}
-          onChange={(e) => setDays(e.target.value)}
-          placeholder="Days"
-          min="2"
-          max="3"
-          style={{border: "1px solid grey", borderRadius:"5px", padding:"5px"}}
-        />
-        <button className="getToday" onClick={() => getWeatherForecast(city2,days)}>Get Days Forecast</button>
-      </div>
-    </div>
+        </div>
+        <div className='c2'>
+          <input
+            type="text"
+            value={city2}
+            onChange={(e) => setCity2(e.target.value)}
+            placeholder="Enter city name"
+            style={{border: "1px solid grey", borderRadius:"5px", padding:"5px"}}
+          />
+          <input
+            type="number"
+            value={days}
+            onChange={(e) => setDays(e.target.value)}
+            placeholder="Days"
+            min="2"
+            max="3"
+            style={{border: "1px solid grey", borderRadius:"5px", padding:"5px"}}
+          />
+          <button className="getToday" onClick={() => getWeatherForecast(city2,days)}>Get Days Forecast</button>
+        </div>
+     </div>
+  </div>
   );
 };
 

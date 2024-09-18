@@ -1,6 +1,5 @@
 import React from 'react'
-import tv from "../images/tv.png"
-import r from "../images/reporter.png"
+import "../output.css"
 
 export const DisplayForecast = ({forecast}) => {
 
@@ -9,8 +8,7 @@ export const DisplayForecast = ({forecast}) => {
         return(
 
                     <div className='details'>
-                        <img src={tv} alt="tv" className='tv'/>
-                        <img src={r} alt="reporter" className='reporter'/>
+                       <div className='tablesa'>
                         <table className='table1a'>
                             <tbody>
                             <tr>
@@ -38,6 +36,7 @@ export const DisplayForecast = ({forecast}) => {
                                 <td>{forecast.forecast.forecastday[0].day.avghumidity}</td>
                             </tr>
                         </tbody>
+                        <img src={forecast.forecast.forecastday[0].day.condition.icon} alt="condition" className='condition'/>
                     </table>
                     <table className='table2a'>
                             <tbody>
@@ -66,7 +65,9 @@ export const DisplayForecast = ({forecast}) => {
                                 <td>{forecast.forecast.forecastday[1].day.avghumidity}</td>
                             </tr>
                         </tbody>
+                        <img src={forecast.forecast.forecastday[1].day.condition.icon} alt="condition" className='condition'/>
                     </table>
+                    </div>
                 </div>
     
         )
@@ -78,8 +79,7 @@ export const DisplayForecast = ({forecast}) => {
 
     
                     <div className='details'>
-                        <img src={tv} alt="tv" className='tv'/>
-                        <img src={r} alt="reporter" className='reporter'/>
+                     <div className='tables'>
                         <table className='table1a'>
                             <tbody>
                             <tr>
@@ -107,6 +107,7 @@ export const DisplayForecast = ({forecast}) => {
                                 <td>{forecast.forecast.forecastday[0].day.avghumidity}</td>
                             </tr>
                         </tbody>
+                        <img src={forecast.forecast.forecastday[0].day.condition.icon} alt="condition" className='condition'/>
                     </table>
                     <table className='table2a'>
                             <tbody>
@@ -135,6 +136,7 @@ export const DisplayForecast = ({forecast}) => {
                                 <td>{forecast.forecast.forecastday[1].day.avghumidity}</td>
                             </tr>
                         </tbody>
+                        <img src={forecast.forecast.forecastday[1].day.condition.icon} alt="condition" className='condition'/>
                     </table>
                     <table className='table3a'>
                             <tbody>
@@ -163,7 +165,9 @@ export const DisplayForecast = ({forecast}) => {
                                 <td>{forecast.forecast.forecastday[2].day.avghumidity}</td>
                             </tr>
                         </tbody>
+                        <img src={forecast.forecast.forecastday[2].day.condition.icon} alt="condition" className='condition'/>
                     </table>
+                    </div>
                 </div>
         )
     }

@@ -1,7 +1,6 @@
 import React from 'react'
 import "../output.css"
-import tv from "../images/tv.png"
-import r from "../images/reporter.png"
+
 
 export const DisplayCurrent = ({weather}) => {
   return (
